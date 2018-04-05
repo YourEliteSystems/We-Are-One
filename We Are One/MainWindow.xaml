@@ -45,6 +45,9 @@
                 <MenuItem
 					Header="_Open"
 					Height="20" />
+                <MenuItem x:Name="mt_close"
+                    Header="_Close"
+                    Height="20" Click="mt_close_Click" />
             </MenuItem>
             <MenuItem
 				Header="_Help"
@@ -58,7 +61,10 @@
                           Header="_Settings"
                           Height="20"
                           Click="mt_Settings_Click"/>
-                <!--<MenuItem Header="_Version" Height="20"/> -->
+                <MenuItem
+                    x:Name="mt_Analyzer"
+                    Header="Analyzer"
+                    Height="20" Click="mt_Analyzer_Click"/>
                 <!--<MenuItem Header="_Version" Height="20"/>-->
                 <MenuItem
 					x:Name="mt_About"

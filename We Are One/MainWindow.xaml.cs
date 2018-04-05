@@ -1,19 +1,11 @@
 ﻿#region Usings
 using nUpdate.Updating;
 using System;
-using System.Data;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
-using System.Drawing;
 using System.Windows;
 using Un4seen.Bass;
-using Un4seen.Bass.Misc;
-using We_Are_One.FileExt;
-using System.Text.RegularExpressions;
-using System.Windows.Controls;
-using System.Timers;
-using System.Windows.Threading;
 #endregion
 
 
@@ -28,8 +20,6 @@ namespace We_Are_One
         MusicPlayer mp = new MusicPlayer();
         StreamRW stream = new StreamRW("stream.cfg");
         private List<string> urlList = new List<string>();
-        private int Time = 0;
-        private Boolean IsEnabled;
         private Boolean IsPlaying;
         #endregion
 
@@ -141,79 +131,16 @@ namespace We_Are_One
             }
         }
 
-        #region Methoden - Call_Equalizer - Frequenz-Steuerung aufrufen 
-/*
-        private void Call_Equalizer()
+        private void mt_Analyzer_Click(object sender, RoutedEventArgs e)
         {
-            // 10-band EQ
-            BASS_DX8_PARAMEQ eq = new BASS_DX8_PARAMEQ();
-
-            _fxEQ[0] = Bass.BASS_ChannelSetFX(_stream, BASSFXType.BASS_FX_DX8_PARAMEQ, 0);
-            _fxEQ[1] = Bass.BASS_ChannelSetFX(_stream, BASSFXType.BASS_FX_DX8_PARAMEQ, 0);
-            _fxEQ[2] = Bass.BASS_ChannelSetFX(_stream, BASSFXType.BASS_FX_DX8_PARAMEQ, 0);
-            _fxEQ[3] = Bass.BASS_ChannelSetFX(_stream, BASSFXType.BASS_FX_DX8_PARAMEQ, 0);
-            _fxEQ[4] = Bass.BASS_ChannelSetFX(_stream, BASSFXType.BASS_FX_DX8_PARAMEQ, 0);
-            _fxEQ[5] = Bass.BASS_ChannelSetFX(_stream, BASSFXType.BASS_FX_DX8_PARAMEQ, 0);
-            _fxEQ[6] = Bass.BASS_ChannelSetFX(_stream, BASSFXType.BASS_FX_DX8_PARAMEQ, 0);
-            _fxEQ[7] = Bass.BASS_ChannelSetFX(_stream, BASSFXType.BASS_FX_DX8_PARAMEQ, 0);
-            _fxEQ[8] = Bass.BASS_ChannelSetFX(_stream, BASSFXType.BASS_FX_DX8_PARAMEQ, 0);
-            _fxEQ[9] = Bass.BASS_ChannelSetFX(_stream, BASSFXType.BASS_FX_DX8_PARAMEQ, 0);
-
-            eq.fBandwidth = 18f;
-
-            // EQ1
-            eq.fCenter = 80f;  // max. Tiefe
-            eq.fGain = this.TrackBar1.Value / 10f;
-            Bass.BASS_FXSetParameters(_fxEQ[0], eq);
-            // EQ2
-            eq.fCenter = 160f;
-            eq.fGain = this.TrackBar2.Value / 10f;
-            Bass.BASS_FXSetParameters(_fxEQ[1], eq);
-            // EQ3
-            eq.fCenter = 300f;
-            eq.fGain = this.TrackBar3.Value / 10f;
-            Bass.BASS_FXSetParameters(_fxEQ[2], eq);
-            // EQ4
-            eq.fCenter = 500f;
-            eq.fGain = TrackBar4.Value / 10f;
-            Bass.BASS_FXSetParameters(_fxEQ[3], eq);
-            // EQ5
-            eq.fCenter = 1000f;
-            eq.fGain = TrackBar5.Value / 10f;
-            Bass.BASS_FXSetParameters(_fxEQ[4], eq);
-            // EQ6
-            eq.fCenter = 3000f;
-            eq.fGain = TrackBar6.Value / 10f;
-            Bass.BASS_FXSetParameters(_fxEQ[5], eq);
-            // EQ7
-            eq.fCenter = 6000f;
-            eq.fGain = TrackBar7.Value / 10f;
-            Bass.BASS_FXSetParameters(_fxEQ[6], eq);
-            // EQ8
-            eq.fCenter = 12000f;
-            eq.fGain = TrackBar8.Value / 10f;
-            Bass.BASS_FXSetParameters(_fxEQ[7], eq);
-            // EQ9
-            eq.fCenter = 14000f;
-            eq.fGain = TrackBar9.Value / 10f;
-            Bass.BASS_FXSetParameters(_fxEQ[8], eq);
-            // EQ10
-            eq.fCenter = 16000f;
-            eq.fGain = TrackBar10.Value / 10f;
-            Bass.BASS_FXSetParameters(_fxEQ[9], eq);
+            /*Form1 form = new Form1();
+            form.Show();*/
         }
 
-
-        private void UpdateEQ(int band, float gain)
+        private void mt_close_Click(object sender, RoutedEventArgs e)
         {
-            BASS_DX8_PARAMEQ eq = new BASS_DX8_PARAMEQ();
-            if (Bass.BASS_FXGetParameters(_fxEQ[band], eq))
-            {
-                eq.fGain = gain;
-                Bass.BASS_FXSetParameters(_fxEQ[band], eq);
-            }
-        }*/
-        #endregion
+            
+        }
     }
 
     public class rItem
