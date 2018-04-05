@@ -9,12 +9,18 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C40691A0-EF37-4966-A784-CCFC59664F92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C40691A0-EF37-4966-A784-CCFC59664F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C40691A0-EF37-4966-A784-CCFC59664F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C40691A0-EF37-4966-A784-CCFC59664F92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C40691A0-EF37-4966-A784-CCFC59664F92}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C40691A0-EF37-4966-A784-CCFC59664F92}.Debug|Any CPU.Build.0 = Debug|x86
+		{C40691A0-EF37-4966-A784-CCFC59664F92}.Debug|x86.ActiveCfg = Debug|x86
+		{C40691A0-EF37-4966-A784-CCFC59664F92}.Debug|x86.Build.0 = Debug|x86
+		{C40691A0-EF37-4966-A784-CCFC59664F92}.Release|Any CPU.ActiveCfg = Release|x86
+		{C40691A0-EF37-4966-A784-CCFC59664F92}.Release|Any CPU.Build.0 = Release|x86
+		{C40691A0-EF37-4966-A784-CCFC59664F92}.Release|x86.ActiveCfg = Release|x86
+		{C40691A0-EF37-4966-A784-CCFC59664F92}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal

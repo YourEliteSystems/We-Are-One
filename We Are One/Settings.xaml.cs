@@ -36,5 +36,9 @@ namespace We_Are_One
         {
             Properties.Settings.Default.LautStearkeSpeichern = chk1.IsChecked.Value;
         }
+		void button1_Click(object sender, RoutedEventArgs e)
+		{
+			
+		}
     }
 }

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<streams>
+  <stream>
+    <Station>Rautemusik.fm #Main</Station>
+    <Url>http://main-high.rautemusik.fm/</Url>
+  </stream>
+  <stream>
+    <Station>Antenne</Station>
+    <Url>http://streams.radiobob.de/bob-acdc/mp3-192/mediaplayer</Url>
+  </stream>
+  <stream>
+    <Station>HardBase.FM</Station>
+    <Url>http://listen.hardbase.fm/tunein-aac-hd</Url>
+  </stream>
+  <stream>
+    <Station>Sunshine Live</Station>
+    <Url>http://stream.hoerradar.de/sunshinelive-mp3-128</Url>
+  </stream>
+  <stream>
+    <Station>YouFM Black</Station>
+    <Url>http://gffstream.ic.llnwd.net/stream/gffstream_mp3_w75a</Url>
+  </stream>
+  <stream>
+    <Station>1LIVE</Station>
+    <Url>http://1live.akacast.akamaistream.net/7/706/119434/v1/gnl.akacast.akamaistream.net/1live</Url>
+  </stream>
+  <stream>
+    <Station>CoreTime.FM</Station>
+    <Url>http://listen.coretime.fm/tunein-aac-hd</Url>
+  </stream>
+</streams>

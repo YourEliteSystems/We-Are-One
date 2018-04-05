@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows;
 using System.Reflection;
-using nUpdate.Updating;
 namespace We_Are_One
 {
     /// <summary>
