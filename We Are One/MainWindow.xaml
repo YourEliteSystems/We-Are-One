@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Window
-	x:Class="We_Are_One.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:We_Are_One"
+	x:Class="We_Are_One.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:We_Are_One"
+    xmlns:wpf="clr-namespace:Vlc.DotNet.Wpf;assembly=Vlc.DotNet.Wpf"
 	mc:Ignorable="d"
 	Title="We Are One"
 	WindowStyle="SingleBorderWindow"
@@ -11,63 +17,63 @@
 	Height="510"
 	Width="1132"
 	x:Name="window1">
-	<Window.CacheMode>
-		<BitmapCache />
-	</Window.CacheMode>
-	<Window.ContextMenu>
-		<ContextMenu />
-	</Window.ContextMenu>
-	<Window.TaskbarItemInfo>
-		<TaskbarItemInfo
+    <Window.CacheMode>
+        <BitmapCache />
+    </Window.CacheMode>
+    <Window.ContextMenu>
+        <ContextMenu />
+    </Window.ContextMenu>
+    <Window.TaskbarItemInfo>
+        <TaskbarItemInfo
 			Overlay="music_os.ico"
 			Description="We Are One Player" />
-	</Window.TaskbarItemInfo>
-	<Grid
+    </Window.TaskbarItemInfo>
+    <Grid
 		RenderTransformOrigin="0.5,0.5">
-		<Grid.RowDefinitions>
-			<RowDefinition
+        <Grid.RowDefinitions>
+            <RowDefinition
 				Height="32*" />
-			<RowDefinition
+            <RowDefinition
 				Height="369*" />
-			<RowDefinition
+            <RowDefinition
 				Height="32*" />
-			<RowDefinition
+            <RowDefinition
 				Height="43*" />
-			<RowDefinition
+            <RowDefinition
 				Height="28*" />
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
 				Width="192*" />
-			<ColumnDefinition
+            <ColumnDefinition
 				Width="73*" />
-			<ColumnDefinition
+            <ColumnDefinition
 				Width="97*" />
-			<ColumnDefinition
+            <ColumnDefinition
 				Width="66*" />
-			<ColumnDefinition
+            <ColumnDefinition
 				Width="86*" />
-			<ColumnDefinition
+            <ColumnDefinition
 				Width="246*" />
-		</Grid.ColumnDefinitions>
-		<Menu
+        </Grid.ColumnDefinitions>
+        <Menu
 			x:Name="mStripe"
 			IsMainMenu="True"
 			Grid.ColumnSpan="6"
 			Margin="0,0,0,2">
-			<MenuItem
+            <MenuItem
 				Header="_File"
 				Height="30"
 				HorizontalAlignment="Left">
-				<MenuItem
+                <MenuItem
 					Header="_Open"
 					Height="20" />
-				<MenuItem
+                <MenuItem
 					x:Name="mt_Close"
 					Header="_Close"
 					Height="20"
 					Click="Mt_Close_Click" />
-			</MenuItem>
+            </MenuItem>
             <MenuItem
 				Header="_Help"
 				Height="30"
@@ -84,12 +90,12 @@
 					Click="Mt_About_Click" />
             </MenuItem>
         </Menu>
-		<Label
+        <Label
 			x:Name="textTime"
 			Margin="2,2,0,7"
 			Grid.Column="3"
 			Grid.Row="2" />
-		<Button
+        <Button
 			x:Name="btnStop"
 			Content="_Stop"
 			Click="BtnStop_Click"
@@ -97,7 +103,7 @@
 			Height="Auto"
 			Grid.Column="4"
 			Grid.Row="3" />
-		<Button
+        <Button
 			x:Name="btnPlay"
 			Content="_Play"
 			Margin="6,6,4,5"
@@ -120,18 +126,18 @@
 			x:Name="senderView"
 			Grid.Row="1"
 			Grid.RowSpan="4"
-			AutoGenerateColumns="False">
-			<DataGrid.Columns>
-				<DataGridTextColumn
+			AutoGenerateColumns="False" CanUserSortColumns="False" CanUserResizeColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn
 					Header="Stream"
-					Binding="{Binding Name}" />
-				<DataGridTextColumn
+					Binding="{Binding Name}" CanUserReorder="False" IsReadOnly="True" />
+                <DataGridTextColumn
 					Header="URL"
 					Binding="{Binding Url}" 
-                    Visibility="Visible"/>
-			</DataGrid.Columns>
-		</DataGrid>
-		<Label
+                    Visibility="Hidden" CanUserReorder="False" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label
 			x:Name="lblStation"
 			Grid.Column="5"
 			HorizontalAlignment="Left"
@@ -140,7 +146,7 @@
 			VerticalAlignment="Top"
 			Height="30"
 			Width="321"/>
-		<Label
+        <Label
 			x:Name="lblBassVersion"
 			Width="145"
 			Height="30"
@@ -150,6 +156,6 @@
 			HorizontalAlignment="Left"
 			VerticalAlignment="Bottom"
 			Margin="113,0,0,3" />
-        
-	</Grid>
+        <wpf:VlcControl x:Name="VlcControl"/>
+    </Grid>
 </Window>
