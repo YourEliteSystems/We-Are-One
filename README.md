@@ -28,6 +28,7 @@ Credit's going to:
 
 ## Contact
 Created by [@DarkEvolution](https://yourelitesystems.de/) - feel free to contact me!
+Projekt Discord [@YourEliteSystems](https://discord.gg/QYmzP3eFZJ) - fell free to join
 
 
 ## Project Logo
